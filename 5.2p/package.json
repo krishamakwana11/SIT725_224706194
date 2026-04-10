@@ -1,0 +1,15 @@
+{
+  "name": "sit725-5.2p-books-mvc",
+  "version": "1.0.0",
+  "description": "Books catalog using MVC strategy",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "author": "Krisha Makwana",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
