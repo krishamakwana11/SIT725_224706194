@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Locate a Socket</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Locate a Socket</h1>
+    <p>Add and view socket locations stored in the database.</p>
+
+    <form id="socketForm">
+      <input type="text" id="place_name" placeholder="Place Name" required />
+      <input type="text" id="suburb" placeholder="Suburb" required />
+      <input type="text" id="socket_type" placeholder="Socket Type" required />
+      <input type="text" id="power_output" placeholder="Power Output" required />
+      <input type="text" id="availability" placeholder="Availability" required />
+      <input type="text" id="notes" placeholder="Notes" />
+      <button type="submit">Add Socket</button>
+    </form>
+
+    <h2>Available Socket Locations</h2>
+    <div id="socketList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
