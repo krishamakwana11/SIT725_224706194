@@ -1,6 +1,18 @@
 const socketForm = document.getElementById('socketForm');
 const socketList = document.getElementById('socketList');
 
+function getSocketImage(placeName) {
+  if (placeName.toLowerCase().includes('library')) {
+    return 'images/image1.jpg';
+  } else if (placeName.toLowerCase().includes('cafe')) {
+    return 'images/image2.jpg';
+  } else if (placeName.toLowerCase().includes('hub')) {
+    return 'images/image3.jpg';
+  } else if (placeName.toLowerCase().includes('station')) {
+    return 'images/image4.jpg';
+  }
+}
+
 async function loadSockets() {
   const response = await fetch('/api/sockets');
   const sockets = await response.json();
@@ -10,7 +22,11 @@ async function loadSockets() {
   sockets.forEach(socket => {
     const div = document.createElement('div');
     div.className = 'card';
+
+    const imagePath = getSocketImage(socket.place_name);
+
     div.innerHTML = `
+      <img src="${imagePath}" alt="${socket.place_name}" class="card-img">
       <h3>${socket.place_name}</h3>
       <p><strong>Suburb:</strong> ${socket.suburb}</p>
       <p><strong>Socket Type:</strong> ${socket.socket_type}</p>
