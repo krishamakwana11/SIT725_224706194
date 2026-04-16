@@ -2,14 +2,20 @@ const socketForm = document.getElementById('socketForm');
 const socketList = document.getElementById('socketList');
 
 function getSocketImage(placeName) {
-  if (placeName.toLowerCase().includes('library')) {
+  const name = placeName.toLowerCase();
+
+  if (name.includes('library')) {
     return 'images/image1.jpg';
-  } else if (placeName.toLowerCase().includes('cafe')) {
+  } else if (name.includes('cafe')) {
     return 'images/image2.jpg';
-  } else if (placeName.toLowerCase().includes('hub')) {
+  } else if (name.includes('hub')) {
     return 'images/image3.jpg';
-  } else if (placeName.toLowerCase().includes('station')) {
+  } else if (name.includes('station')) {
     return 'images/image4.jpg';
+  } else if (name.includes('deakin')) {
+    return 'images/image5.jpg';
+  } else {
+    return 'images/default.jpg';
   }
 }
 
